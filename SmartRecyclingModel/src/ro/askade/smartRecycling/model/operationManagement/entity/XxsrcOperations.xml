@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XxsrcOperations"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="xxsrc_operations"
+  AliasName="XxsrcOperations"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="VoucherNr"
+    IsNotNull="true"
+    ColumnName="voucher_nr"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_operations"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="OperTypeId"
+    ColumnName="oper_type_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_operations">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="OperClientOrderer"
+    ColumnName="oper_client_orderer"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_operations">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DataIn"
+    ColumnName="data_in"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="DATETIME"
+    TableName="xxsrc_operations"/>
+  <Attribute
+    Name="DataOut"
+    ColumnName="data_out"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="DATETIME"
+    TableName="xxsrc_operations"/>
+  <Attribute
+    Name="CreationDate"
+    ColumnName="creation_date"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="DATETIME"
+    TableName="xxsrc_operations"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="200"
+    ColumnName="created_by"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_operations">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="last_update_date"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="xxsrc_operations"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="200"
+    ColumnName="last_updated_by"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_operations">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="XxsrcOperations"
+    Association="ro.askade.smartRecycling.model.operationManagemententity.SopOcoFkAssoc"
+    AssociationEnd="ro.askade.smartRecycling.model.operationManagemententity.SopOcoFkAssoc.XxsrcOperations"
+    AssociationOtherEnd="ro.askade.smartRecycling.model.operationManagemententity.SopOcoFkAssoc.OperClientOrdererXxsrcOperations"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="OperClientOrdererXxsrcOperations"
+    Association="ro.askade.smartRecycling.model.operationManagemententity.SopOcoFkAssoc"
+    AssociationEnd="ro.askade.smartRecycling.model.operationManagemententity.SopOcoFkAssoc.OperClientOrdererXxsrcOperations"
+    AssociationOtherEnd="ro.askade.smartRecycling.model.operationManagemententity.SopOcoFkAssoc.XxsrcOperations"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.operationManagement.entity.XxsrcOperations.VoucherNr"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SopOcoFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="sop_oco_fk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.operationManagement.entity.XxsrcOperations.OperClientOrderer"/>
+    </AttrArray>
+  </Key>
+</Entity>

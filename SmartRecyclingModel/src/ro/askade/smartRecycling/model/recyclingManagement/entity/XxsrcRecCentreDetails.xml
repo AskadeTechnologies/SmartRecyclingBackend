@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XxsrcRecCentreDetails"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="xxsrc_rec_centre_details"
+  AliasName="XxsrcRecCentreDetails"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="Id"
+    IsNotNull="true"
+    ColumnName="id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_rec_centre_details"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CentreId"
+    IsNotNull="true"
+    ColumnName="centre_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_rec_centre_details">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CentreChildTypeId"
+    IsNotNull="true"
+    ColumnName="centre_child_type_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_rec_centre_details">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="UsePercent"
+    IsNotNull="true"
+    ColumnName="use_percent"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_rec_centre_details">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DataIn"
+    ColumnName="data_in"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="xxsrc_rec_centre_details"/>
+  <Attribute
+    Name="DataOut"
+    ColumnName="data_out"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="xxsrc_rec_centre_details"/>
+  <AccessorAttribute
+    Name="XxsrcCentreChildTypes"
+    Association="ro.askade.smartRecycling.model.recyclingManagement.assoc.SreccCtrTypIdFkAssoc2"
+    AssociationEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SreccCtrTypIdFkAssoc2.XxsrcCentreChildTypes"
+    AssociationOtherEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SreccCtrTypIdFkAssoc2.XxsrcRecCentreDetails"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="XxsrcRecyclingCentres"
+    Association="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetFKAssoc"
+    AssociationEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetFKAssoc.XxsrcRecyclingCentres"
+    AssociationOtherEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetFKAssoc.XxsrcRecCentreDetails"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="XxsrcCentreChildTypes1"
+    Association="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetTypFkAssoc"
+    AssociationEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetTypFkAssoc.XxsrcCentreChildTypes1"
+    AssociationOtherEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetTypFkAssoc.XxsrcRecCentreDetails"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecCentreDetails.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SreccCtrIdFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="srecc_ctr_id_fk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecCentreDetails.CentreId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SreccCtrTypIdFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="srecc_ctr_typ_id_fk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecCentreDetails.CentreChildTypeId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_XxsrcRecCentreDetails">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="fk_Xxsrc_Rec_Centre_Details"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecCentreDetails.CentreId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_XxsrcRecCentreDetails1">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="fk_Xxsrc_Rec_Centre_Details1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecCentreDetails.CentreChildTypeId"/>
+    </AttrArray>
+  </Key>
+</Entity>

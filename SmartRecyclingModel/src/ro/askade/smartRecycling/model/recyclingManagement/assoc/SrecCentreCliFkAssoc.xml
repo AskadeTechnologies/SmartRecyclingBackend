@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SrecCentreCliFkAssoc"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="XxsrcClients"
+    Cardinality="1"
+    Source="true"
+    Owner="ro.askade.smartRecycling.model.clientManagement.entity.XxsrcClients">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.clientManagement.entity.XxsrcClients.ClientId"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="XxsrcRecyclingCentres"
+    Cardinality="-1"
+    Owner="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecyclingCentres">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="XxsrcRecyclingCentres"/>
+      <Attr Name="_foreignKey"
+        Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecyclingCentres.SrecCoFk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecyclingCentres.CentreOwnerId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

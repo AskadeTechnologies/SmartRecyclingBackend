@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Association SYSTEM "jbo_03_01.dtd">
+<!---->
+<Association
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SrecCentreDetTypFkAssoc"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <AssociationEnd
+    Name="XxsrcCentreChildTypes1"
+    Cardinality="1"
+    Source="true"
+    Owner="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcCentreChildTypes"
+    LockLevel="NONE">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_minCardinality" Value="1"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="XxsrcCentreChildTypes1"/>
+      <Attr Name="_foreignKey"
+        Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcCentreChildTypes.Primary1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcCentreChildTypes.Id"/>
+    </AttrArray>
+  </AssociationEnd>
+  <AssociationEnd
+    Name="XxsrcRecCentreDetails"
+    Cardinality="-1"
+    Owner="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecCentreDetails">
+    <DesignTime>
+      <Attr Name="_isUpdateable" Value="true"/>
+      <Attr Name="_aggregation" Value="0"/>
+      <Attr Name="_finderName" Value="XxsrcRecCentreDetails"/>
+      <Attr Name="_foreignKey"
+        Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecCentreDetails.fk_XxsrcRecCentreDetails1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecCentreDetails.CentreChildTypeId"/>
+    </AttrArray>
+  </AssociationEnd>
+</Association>

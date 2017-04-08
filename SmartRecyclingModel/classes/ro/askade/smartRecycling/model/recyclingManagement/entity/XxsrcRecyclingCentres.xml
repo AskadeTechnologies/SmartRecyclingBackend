@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XxsrcRecyclingCentres"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="xxsrc_recycling_centres"
+  AliasName="XxsrcRecyclingCentres"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="CentreId"
+    IsNotNull="true"
+    ColumnName="centre_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_recycling_centres"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CentreDescription"
+    Precision="500"
+    ColumnName="centre_description"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_recycling_centres">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CentreOwnerId"
+    ColumnName="centre_owner_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_recycling_centres">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CentreLocationLat"
+    Precision="500"
+    ColumnName="centre_location_lat"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_recycling_centres">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="CentreLocationLong"
+    Precision="500"
+    ColumnName="centre_location_long"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_recycling_centres">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DataIn"
+    ColumnName="data_in"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="xxsrc_recycling_centres"/>
+  <Attribute
+    Name="DataOut"
+    ColumnName="data_out"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="xxsrc_recycling_centres"/>
+  <Attribute
+    Name="CreationDate"
+    ColumnName="creation_date"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="DATETIME"
+    TableName="xxsrc_recycling_centres"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="200"
+    ColumnName="created_by"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_recycling_centres">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="last_update_date"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="xxsrc_recycling_centres"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="200"
+    ColumnName="last_updated_by"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_recycling_centres">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="XxsrcClients"
+    Association="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreCliFkAssoc"
+    AssociationEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreCliFkAssoc.XxsrcClients"
+    AssociationOtherEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreCliFkAssoc.XxsrcRecyclingCentres"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="XxsrcRecCentreDetails"
+    Association="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetFKAssoc"
+    AssociationEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetFKAssoc.XxsrcRecCentreDetails"
+    AssociationOtherEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetFKAssoc.XxsrcRecyclingCentres"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecyclingCentres.CentreId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SrecCoFk">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="PRIMARY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="srec_co_fk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcRecyclingCentres.CentreOwnerId"/>
+    </AttrArray>
+  </Key>
+</Entity>

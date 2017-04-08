@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="XxsrcCentreChildTypes"
+  Version="12.2.1.12.24"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="xxsrc_centre_child_types"
+  AliasName="XxsrcCentreChildTypes"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="Id"
+    IsNotNull="true"
+    ColumnName="id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="xxsrc_centre_child_types"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Code"
+    IsUnique="true"
+    IsNotNull="true"
+    Precision="100"
+    ColumnName="code"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_centre_child_types">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="100"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Description"
+    Precision="500"
+    ColumnName="description"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_centre_child_types">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="500"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="DataIn"
+    ColumnName="data_in"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="xxsrc_centre_child_types"/>
+  <Attribute
+    Name="DataOut"
+    ColumnName="data_out"
+    SQLType="DATE"
+    Type="java.sql.Date"
+    ColumnType="DATE"
+    TableName="xxsrc_centre_child_types"/>
+  <Attribute
+    Name="CreationDate"
+    ColumnName="creation_date"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="DATETIME"
+    TableName="xxsrc_centre_child_types"/>
+  <Attribute
+    Name="CreatedBy"
+    Precision="200"
+    ColumnName="created_by"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_centre_child_types">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LastUpdateDate"
+    IsNotNull="true"
+    ColumnName="last_update_date"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="TIMESTAMP"
+    TableName="xxsrc_centre_child_types"/>
+  <Attribute
+    Name="LastUpdatedBy"
+    Precision="200"
+    ColumnName="last_updated_by"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="xxsrc_centre_child_types">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="200"/>
+    </DesignTime>
+  </Attribute>
+  <AccessorAttribute
+    Name="XxsrcRecCentreDetails"
+    Association="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetTypFkAssoc"
+    AssociationEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetTypFkAssoc.XxsrcRecCentreDetails"
+    AssociationOtherEnd="ro.askade.smartRecycling.model.recyclingManagement.assoc.SrecCentreDetTypFkAssoc.XxsrcCentreChildTypes1"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <Key
+    Name="Primary1"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="PRIMARY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcCentreChildTypes.Id"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="SrcctCodUk">
+    <DesignTime>
+      <Attr Name="_isUnique" Value="true"/>
+      <Attr Name="_DBObjectName" Value="srcct_cod_uk"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="ro.askade.smartRecycling.model.recyclingManagement.entity.XxsrcCentreChildTypes.Code"/>
+    </AttrArray>
+  </Key>
+</Entity>
